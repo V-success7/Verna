@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verna Roberts | Public Health Portfolio</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      background-color: #fffaf5;
+      color: #333;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      background: linear-gradient(135deg, #f4a261, #e76f51);
+      color: white;
+      padding: 4rem 0;
+    }
+
+    .hero {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .hero-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .hero-text h1 {
+      font-size: 3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero-text p {
+      font-size: 1.2rem;
+    }
+
+    .hero-photo {
+      flex-shrink: 0;
+    }
+
+    /* Replace the line below with:
+       <img src="photo.jpg" alt="Verna Roberts" class="profile-photo">
+       to display your photo instead of initials.
+    */
+    .initials-circle {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      background-color: rgba(255,255,255,0.25);
+      border: 4px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+      font-weight: bold;
+      color: white;
+    }
+
+    .profile-photo {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid white;
+    }
+
+    section {
+      padding: 4rem 0;
+    }
+
+    h2 {
+      color: #e76f51;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+
+    .about p {
+      margin-bottom: 1rem;
+    }
+
+    .skills-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .skill {
+      background-color: #f4a261;
+      color: white;
+      padding: 0.8rem 1.2rem;
+      border-radius: 999px;
+      font-weight: bold;
+    }
+
+    .portfolio-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      border-top: 5px solid #f4a261;
+    }
+
+    .card h3 {
+      margin-bottom: 0.75rem;
+      color: #333;
+    }
+
+    .contact-box {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .contact-box p {
+      margin-bottom: 0.75rem;
+    }
+
+    a {
+      color: #e76f51;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background-color: #f4a261;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        text-align: center;
+        flex-direction: column-reverse;
+      }
+
+      .hero-text h1 {
+        font-size: 2.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="container hero">
+      <div class="hero-text">
+        <h1>Verna Roberts</h1>
+        <p>Public Health student inspired and dedicated to improving community health</p>
+      </div>
+
+      <div class="hero-photo">
+        <!-- Replace the line below with:
+             <img src="photo.jpg" alt="Verna Roberts" class="profile-photo">
+             to display your photo instead of initials. -->
+        <div class="initials-circle">VR</div>
+      </div>
+    </div>
+  </header>
+
+  <section class="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        I am a Public Health student at York College CUNY with an expected graduation year of 2028.
+        I chose public health because I want to address community health needs and contribute to
+        creating healthier communities.
+      </p>
+      <p>
+        The health issue I care most about is health equity because everyone deserves access to care
+        and opportunities to achieve good health outcomes.
+      </p>
+      <p>
+        My career goal is to work in community health programs where I can support initiatives that
+        improve health and well-being for diverse populations.
+      </p>
+    </div>
+  </section>
+
+  <section class="skills">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill">Communication</div>
+        <div class="skill">Teamwork</div>
+        <div class="skill">Empathy</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio">
+    <div class="container">
+      <h2>PH 320 Portfolio — Applied Biostatistics in Public Health, York College CUNY</h2>
+
+      <div class="portfolio-grid">
+
+        <!-- Add Week 3 project link here later -->
+        <div class="card">
+          <h3>Week 3</h3>
+          <p>Coming soon.</p>
+        </div>
+
+        <!-- Add Week 4 project link here later -->
+        <div class="card">
+          <h3>Week 4</h3>
+          <p>Coming soon.</p>
+        </div>
+
+        <!-- Add Week 5 project link here later -->
+        <div class="card">
+          <h3>Week 5</h3>
+          <p>Coming soon.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="contact">
+    <div class="container">
+      <h2>Contact</h2>
+
+      <div class="contact-box">
+        <p><strong>Email:</strong> <a href="mailto:verna.roberts21@login.cuny.edu">verna.roberts21@login.cuny.edu</a></p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 Verna Roberts</p>
+  </footer>
+
+</body>
+</html>
