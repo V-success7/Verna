@@ -165,10 +165,6 @@
       flex-shrink: 0;
     }
 
-    /* Replace the line below with:
-       <img src="photo.jpg" alt="Verna Roberts" class="profile-photo">
-       to display your photo instead of initials.
-    */
     .initials-circle {
       width: 180px;
       height: 180px;
@@ -296,7 +292,6 @@
 </head>
 <body>
 
-  <!-- Navigation Menu -->
   <nav>
     <div class="nav-container">
       <a href="index.html" class="nav-brand">VR</a>
@@ -306,6 +301,7 @@
         <li><a href="#skills">Skills</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="cross-sectional.html">Study: Cross-Sectional</a></li>
+        <li><a href="regression.html">Relationship between smoking and mental distress</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="hamburger" id="hamburger">
@@ -324,9 +320,6 @@
       </div>
 
       <div class="hero-photo">
-        <!-- Replace the line below with:
-             <img src="photo.jpg" alt="Verna Roberts" class="profile-photo">
-             to display your photo instead of initials. -->
         <div class="initials-circle">VR</div>
       </div>
     </div>
@@ -368,29 +361,31 @@
 
       <div class="portfolio-grid">
 
-        <!-- Add Week 3 project link here later -->
         <div class="card">
           <h3>Week 3</h3>
           <p>Coming soon.</p>
         </div>
 
-        <!-- Add Week 4 project link here later -->
         <div class="card">
           <h3>Week 4</h3>
           <p>Coming soon.</p>
         </div>
 
-        <!-- Add Week 5 project link here later -->
         <div class="card">
           <h3>Week 5</h3>
           <p>Coming soon.</p>
         </div>
 
-        <!-- Cross-Sectional Study -->
         <div class="card">
           <h3>Cross-Sectional Study</h3>
           <p>Analysis of mental health trends in young adults.</p>
           <a href="cross-sectional.html">View Study →</a>
+        </div>
+
+        <div class="card">
+          <h3>Relationship between smoking and mental distress</h3>
+          <p>Regression analysis of smoking and distress relationship.</p>
+          <a href="regression.html">View Study →</a>
         </div>
 
       </div>
@@ -412,7 +407,6 @@
   </footer>
 
   <script>
-    // Hamburger Menu Toggle
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('navMenu');
 
@@ -421,7 +415,6 @@
       navMenu.classList.toggle('active');
     });
 
-    // Close menu when a link is clicked
     const navLinks = navMenu.querySelectorAll('a');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
