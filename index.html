@@ -94,6 +94,10 @@
       transform: rotate(-45deg) translate(7px, -7px);
     }
 
+    .menu-table-preview {
+      display: none;
+    }
+
     @media (max-width: 768px) {
       .hamburger {
         display: flex;
@@ -113,7 +117,7 @@
       }
 
       .nav-menu.active {
-        max-height: 520px;
+        max-height: 620px;
       }
 
       .nav-menu li {
@@ -127,6 +131,23 @@
 
       .nav-menu a {
         display: block;
+      }
+
+      .menu-table-preview {
+        display: block;
+      }
+
+      .menu-table-preview a {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .menu-table-preview img {
+        width: 70px;
+        height: auto;
+        background: white;
+        border: 1px solid rgba(255,255,255,0.7);
       }
     }
 
@@ -299,6 +320,12 @@
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="cross-sectional.html">Study: Cross-Sectional</a></li>
         <li><a href="regression.html">Relationship between smoking and mental distress</a></li>
+        <li class="menu-table-preview">
+          <a href="regression.html">
+            <img src="Screenshot 2026-10-21 110251.png" alt="Regression output table">
+            <span>Relationship between smoking and mental distress</span>
+          </a>
+        </li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="hamburger" id="hamburger">
