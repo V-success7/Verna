@@ -5,25 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Verna Roberts | Public Health Portfolio</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: Arial, Helvetica, sans-serif;
       line-height: 1.6;
       background-color: #fffaf5;
       color: #333;
     }
-
-    .container {
-      width: 90%;
-      max-width: 1100px;
-      margin: auto;
-    }
-
+    .container { width: 90%; max-width: 1100px; margin: auto; }
     nav {
       background: linear-gradient(135deg, #f4a261, #e76f51);
       padding: 1rem 0;
@@ -32,7 +21,6 @@
       z-index: 1000;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-
     .nav-container {
       width: 90%;
       max-width: 1100px;
@@ -41,39 +29,30 @@
       justify-content: space-between;
       align-items: center;
     }
-
     .nav-brand {
       color: white;
       font-size: 1.5rem;
       font-weight: bold;
       text-decoration: none;
     }
-
     .nav-menu {
       display: flex;
       list-style: none;
       gap: 2rem;
     }
-
     .nav-menu a {
       color: white;
       text-decoration: none;
       font-weight: 500;
       transition: opacity 0.3s ease;
     }
-
-    .nav-menu a:hover {
-      opacity: 0.8;
-      text-decoration: underline;
-    }
-
+    .nav-menu a:hover { opacity: 0.8; text-decoration: underline; }
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
       gap: 6px;
     }
-
     .hamburger span {
       width: 25px;
       height: 3px;
@@ -81,28 +60,12 @@
       border-radius: 2px;
       transition: all 0.3s ease;
     }
-
-    .hamburger.active span:nth-child(1) {
-      transform: rotate(45deg) translate(8px, 8px);
-    }
-
-    .hamburger.active span:nth-child(2) {
-      opacity: 0;
-    }
-
-    .hamburger.active span:nth-child(3) {
-      transform: rotate(-45deg) translate(7px, -7px);
-    }
-
-    .menu-table-preview {
-      display: none;
-    }
-
+    .hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(8px, 8px); }
+    .hamburger.active span:nth-child(2) { opacity: 0; }
+    .hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -7px); }
+    .menu-table-preview { display: none; }
     @media (max-width: 768px) {
-      .hamburger {
-        display: flex;
-      }
-
+      .hamburger { display: flex; }
       .nav-menu {
         position: absolute;
         top: 60px;
@@ -115,34 +78,12 @@
         overflow: hidden;
         transition: max-height 0.3s ease;
       }
-
-      .nav-menu.active {
-        max-height: 620px;
-      }
-
-      .nav-menu li {
-        padding: 1rem;
-        border-bottom: 1px solid rgba(255,255,255,0.2);
-      }
-
-      .nav-menu li:last-child {
-        border-bottom: none;
-      }
-
-      .nav-menu a {
-        display: block;
-      }
-
-      .menu-table-preview {
-        display: block;
-      }
-
-      .menu-table-preview a {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-      }
-
+      .nav-menu.active { max-height: 620px; }
+      .nav-menu li { padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.2); }
+      .nav-menu li:last-child { border-bottom: none; }
+      .nav-menu a { display: block; }
+      .menu-table-preview { display: block; }
+      .menu-table-preview a { display: flex; align-items: center; gap: 12px; }
       .menu-table-preview img {
         width: 70px;
         height: auto;
@@ -150,13 +91,11 @@
         border: 1px solid rgba(255,255,255,0.7);
       }
     }
-
     header {
       background: linear-gradient(135deg, #f4a261, #e76f51);
       color: white;
       padding: 4rem 0;
     }
-
     .hero {
       display: flex;
       align-items: center;
@@ -164,25 +103,10 @@
       gap: 2rem;
       flex-wrap: wrap;
     }
-
-    .hero-text {
-      flex: 1;
-      min-width: 280px;
-    }
-
-    .hero-text h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero-text p {
-      font-size: 1.2rem;
-    }
-
-    .hero-photo {
-      flex-shrink: 0;
-    }
-
+    .hero-text { flex: 1; min-width: 280px; }
+    .hero-text h1 { font-size: 3rem; margin-bottom: 0.5rem; }
+    .hero-text p { font-size: 1.2rem; }
+    .hero-photo { flex-shrink: 0; }
     .initials-circle {
       width: 180px;
       height: 180px;
@@ -196,7 +120,6 @@
       font-weight: bold;
       color: white;
     }
-
     .profile-photo {
       width: 180px;
       height: 180px;
@@ -204,28 +127,19 @@
       object-fit: cover;
       border: 4px solid white;
     }
-
-    section {
-      padding: 4rem 0;
-    }
-
+    section { padding: 4rem 0; }
     h2 {
       color: #e76f51;
       margin-bottom: 1rem;
       font-size: 2rem;
     }
-
-    .about p {
-      margin-bottom: 1rem;
-    }
-
+    .about p { margin-bottom: 1rem; }
     .skills-list {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       margin-top: 1rem;
     }
-
     .skill {
       background-color: #f4a261;
       color: white;
@@ -233,14 +147,12 @@
       border-radius: 999px;
       font-weight: bold;
     }
-
     .portfolio-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
       gap: 1.5rem;
       margin-top: 1.5rem;
     }
-
     .card {
       background: white;
       border-radius: 16px;
@@ -249,67 +161,35 @@
       border-top: 5px solid #f4a261;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
-
     .card:hover {
       transform: translateY(-5px);
       box-shadow: 0 8px 16px rgba(0,0,0,0.12);
     }
-
-    .card h3 {
-      margin-bottom: 0.75rem;
-      color: #333;
-    }
-
-    .card a {
-      color: #e76f51;
-      font-weight: bold;
-    }
-
+    .card h3 { margin-bottom: 0.75rem; color: #333; }
+    .card a { color: #e76f51; font-weight: bold; }
     .contact-box {
       background: white;
       padding: 1.5rem;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.08);
     }
-
-    .contact-box p {
-      margin-bottom: 0.75rem;
-    }
-
-    a {
-      color: #e76f51;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
+    .contact-box p { margin-bottom: 0.75rem; }
+    a { color: #e76f51; text-decoration: none; }
+    a:hover { text-decoration: underline; }
     footer {
       text-align: center;
       padding: 1.5rem;
       background-color: #f4a261;
       color: white;
     }
-
     @media (max-width: 768px) {
-      .hero {
-        text-align: center;
-        flex-direction: column-reverse;
-      }
-
-      .hero-text h1 {
-        font-size: 2.3rem;
-      }
-
-      section {
-        padding: 2rem 0;
-      }
+      .hero { text-align: center; flex-direction: column-reverse; }
+      .hero-text h1 { font-size: 2.3rem; }
+      section { padding: 2rem 0; }
     }
   </style>
 </head>
 <body>
-
   <nav>
     <div class="nav-container">
       <a href="index.html" class="nav-brand">VR</a>
@@ -342,7 +222,6 @@
         <h1>Verna Roberts</h1>
         <p>Public Health student inspired and dedicated to improving community health</p>
       </div>
-
       <div class="hero-photo">
         <div class="initials-circle">VR</div>
       </div>
@@ -352,19 +231,9 @@
   <section class="about" id="about">
     <div class="container">
       <h2>About Me</h2>
-      <p>
-        I am a Public Health student at York College CUNY with an expected graduation year of 2028.
-        I chose public health because I want to address community health needs and contribute to
-        creating healthier communities.
-      </p>
-      <p>
-        The health issue I care most about is health equity because everyone deserves access to care
-        and opportunities to achieve good health outcomes.
-      </p>
-      <p>
-        My career goal is to work in community health programs where I can support initiatives that
-        improve health and well-being for diverse populations.
-      </p>
+      <p>I am a Public Health student at York College CUNY with an expected graduation year of 2028. I chose public health because I want to address community health needs and contribute to creating healthier communities.</p>
+      <p>The health issue I care most about is health equity because everyone deserves access to care and opportunities to achieve good health outcomes.</p>
+      <p>My career goal is to work in community health programs where I can support initiatives that improve health and well-being for diverse populations.</p>
     </div>
   </section>
 
@@ -382,36 +251,20 @@
   <section class="portfolio" id="portfolio">
     <div class="container">
       <h2>PH 320 Portfolio — Applied Biostatistics in Public Health, York College CUNY</h2>
-
       <div class="portfolio-grid">
-
-        <div class="card">
-          <h3>Week 3</h3>
-          <p>Coming soon.</p>
-        </div>
-
-        <div class="card">
-          <h3>Week 4</h3>
-          <p>Coming soon.</p>
-        </div>
-
-        <div class="card">
-          <h3>Week 5</h3>
-          <p>Coming soon.</p>
-        </div>
-
+        <div class="card"><h3>Week 3</h3><p>Coming soon.</p></div>
+        <div class="card"><h3>Week 4</h3><p>Coming soon.</p></div>
+        <div class="card"><h3>Week 5</h3><p>Coming soon.</p></div>
         <div class="card">
           <h3>Cross-Sectional Study</h3>
           <p>Analysis of mental health trends in young adults.</p>
           <a href="cross-sectional.html">View Study →</a>
         </div>
-
         <div class="card">
           <h3>Relationship between smoking and mental distress</h3>
           <p>Regression analysis of smoking and distress relationship.</p>
           <a href="regression.html">View Study →</a>
         </div>
-
       </div>
     </div>
   </section>
@@ -419,7 +272,6 @@
   <section class="contact" id="contact">
     <div class="container">
       <h2>Contact</h2>
-
       <div class="contact-box">
         <p><strong>Email:</strong> <a href="mailto:verna.roberts21@login.cuny.edu">verna.roberts21@login.cuny.edu</a></p>
       </div>
@@ -433,12 +285,10 @@
   <script>
     const hamburger = document.getElementById('hamburger');
     const navMenu = document.getElementById('navMenu');
-
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
     });
-
     const navLinks = navMenu.querySelectorAll('a');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
@@ -447,6 +297,5 @@
       });
     });
   </script>
-
 </body>
 </html>
