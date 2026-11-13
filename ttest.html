@@ -92,6 +92,15 @@
       margin: 0 0 1rem;
     }
 
+    ol {
+      padding-left: 1.25rem;
+      margin: 0 0 1rem;
+    }
+
+    li {
+      margin-bottom: 0.75rem;
+    }
+
     .table-wrap {
       overflow-x: auto;
       margin-top: 1rem;
@@ -184,6 +193,7 @@
         <li><a href="cross-sectional.html">Study: Cross-Sectional</a></li>
         <li><a href="regression.html">Relationship between smoking and mental distress</a></li>
         <li><a href="ttest.html">Writing hand vs other hand</a></li>
+        <li><a href="ttest.html#which-test">Which test would you use?</a></li>
         <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </div>
@@ -256,6 +266,33 @@
     <h2>What I Would Do Differently</h2>
     <p>We only had 9 students. This is a very small group, so one or two off days can make the whole class look worse than it is. We see the 'what' scores but not the 'why'. We don't know why they scored a 6 instead of an 8. Additionally, we are judging everything based on one specific column (Writing hand). It doesn't capture their performance in other areas like 'other hand' or 'script'. Lastly, we know the class is below the benchmark, but we don't know if this is a permanent struggle or just a one-time result.</p>
 
+    <section id="which-test">
+      <h2>Which test would you use?</h2>
+      <ol>
+        <li>
+          <strong>Paired-samples t-test.</strong> “Before” and “again after” means the same patients are measured twice.
+        </li>
+        <li>
+          <strong>Independent-samples t-test.</strong> “Students who commute” and “students who live on campus” are two separate groups.
+        </li>
+        <li>
+          <strong>One-sample t-test.</strong> The county’s average is being compared with one fixed value: the national average of 7.5 pounds.
+        </li>
+        <li>
+          <strong>Correlation (Pearson correlation).</strong> The question asks whether two numeric measures—smoking and mental distress—vary together across ZIP codes.
+        </li>
+        <li>
+          <strong>Paired-samples t-test.</strong> “Each member” is measured in both January and June, so the measurements are paired.
+        </li>
+        <li>
+          <strong>Independent-samples t-test.</strong> Wait times are compared between two separate groups: patients at two different hospitals.
+        </li>
+        <li>
+          <strong>Chi-square test of independence.</strong> Both variables are categorical yes/no responses, and the question asks whether they are related.
+        </li>
+      </ol>
+    </section>
+
     <a href="index.html" class="home-link">Home</a>
 
     <footer>
@@ -265,4 +302,3 @@
   </main>
 </body>
 </html>
-
