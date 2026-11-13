@@ -39,6 +39,7 @@
       display: flex;
       list-style: none;
       gap: 2rem;
+      align-items: center;
     }
     .nav-menu a {
       color: white;
@@ -47,6 +48,30 @@
       transition: opacity 0.3s ease;
     }
     .nav-menu a:hover { opacity: 0.8; text-decoration: underline; }
+    .nav-menu .has-submenu {
+      position: relative;
+    }
+    .nav-menu .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      margin-top: 0.5rem;
+      background: linear-gradient(135deg, #f4a261, #e76f51);
+      list-style: none;
+      padding: 0.5rem 0.75rem;
+      min-width: 230px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      z-index: 10;
+    }
+    .nav-menu .has-submenu:hover .submenu,
+    .nav-menu .has-submenu:focus-within .submenu {
+      display: block;
+    }
+    .nav-menu .submenu li {
+      padding: 0.5rem 0;
+    }
     .hamburger {
       display: none;
       flex-direction: column;
@@ -78,10 +103,26 @@
         overflow: hidden;
         transition: max-height 0.3s ease;
       }
-      .nav-menu.active { max-height: 760px; }
+      .nav-menu.active { max-height: 900px; }
       .nav-menu li { padding: 1rem; border-bottom: 1px solid rgba(255,255,255,0.2); }
       .nav-menu li:last-child { border-bottom: none; }
       .nav-menu a { display: block; }
+      .nav-menu .has-submenu {
+        width: 100%;
+      }
+      .nav-menu .submenu {
+        display: block;
+        position: static;
+        margin: 0.75rem 0 0 0.75rem;
+        background: transparent;
+        box-shadow: none;
+        padding: 0 0 0 1rem;
+        min-width: 0;
+        border-left: 1px solid rgba(255,255,255,0.4);
+      }
+      .nav-menu .submenu li {
+        padding: 0.5rem 0;
+      }
       .menu-table-preview { display: block; }
       .menu-table-preview a { display: flex; align-items: center; gap: 12px; }
       .menu-table-preview img {
@@ -200,8 +241,12 @@
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="cross-sectional.html">Study: Cross-Sectional</a></li>
         <li><a href="regression.html">Relationship between smoking and mental distress</a></li>
-        <li><a href="ttest.html">Writing hand vs other hand</a></li>
-        <li><a href="ttest.html#which-test">Which test would you use?</a></li>
+        <li class="has-submenu">
+          <a href="ttest.html">Writing hand vs other hand</a>
+          <ul class="submenu">
+            <li><a href="ttest.html#which-test">Which test would you use?</a></li>
+          </ul>
+        </li>
         <li class="menu-table-preview">
           <a href="regression.html">
             <img src="Screenshot 2026-10-21 110251.png" alt="Regression output table">
