@@ -228,12 +228,60 @@
       .hero-text h1 { font-size: 2.3rem; }
       section { padding: 2rem 0; }
     }
+   
+    :root{--orange:#ff8c24;--brown:#654332;--dark:#432e24;--green:#87a878;--cream:#fff4e8}
+    html{scroll-behavior:smooth;scroll-padding-top:90px}
+    body{background:#fdfbf7;color:var(--dark);font-family:system-ui,Arial,sans-serif}
+    nav{background:#fdfbf7;border-bottom:1px solid #eadbcd;box-shadow:none;padding:1rem 0}
+    .nav-brand{color:var(--brown);display:flex;align-items:center;gap:12px;font-size:1.05rem}
+    .brand-mark{display:grid;place-items:center;background:var(--orange);border-radius:50%;width:42px;height:42px;font-weight:800}
+    .nav-container{position:relative}
+    .hamburger{display:flex;background:transparent;border:1px solid #d8c3b1;border-radius:12px;padding:12px;align-items:center}
+    .hamburger span{background:var(--brown)}
+    .nav-menu{display:none;position:absolute;top:calc(100% + 12px);right:0;left:auto;width:min(360px,100%);max-height:75vh;overflow:auto;background:#fffaf5;border:1px solid #eadbcd;border-radius:16px;box-shadow:0 16px 40px #65433220;padding:12px;gap:0;align-items:stretch;flex-direction:column}
+    .nav-menu.active{display:flex;max-height:75vh}
+    .nav-menu li{padding:10px 12px;border-bottom:1px solid #eadbcd}
+    .nav-menu a{color:var(--brown);display:block;font-size:.95rem}
+    .nav-menu .submenu{display:block;position:static;background:none;box-shadow:none;margin:8px 0 0;padding:0 0 0 12px;border-left:2px solid var(--green);min-width:0}
+    .nav-menu .menu-table-preview{display:none}
+    header{background:radial-gradient(ellipse at 95% 10%,#ffcf9e 0%,transparent 48%),var(--cream);color:var(--brown);padding:clamp(3rem,8vw,7rem) 0}
+    .hero{gap:3rem}
+    .hero-text{min-width:0}
+    .eyebrow{font-size:.75rem!important;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:#486440;margin-bottom:1rem}
+    .hero-text h1{font-family:Georgia,serif;font-size:clamp(2.6rem,6vw,4.8rem);line-height:1.08;font-weight:500;margin-bottom:1.2rem}
+    .hero-text h1 span{color:#b95310;display:block}
+    .hero-text p{max-width:36rem}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:1.8rem}
+    .cta{display:inline-block;border-radius:999px;padding:.8rem 1.4rem;background:var(--orange);color:var(--dark);font-weight:700;border:1px solid transparent}
+    .cta.secondary{background:transparent;border-color:var(--brown)}
+    .hero-photo{position:relative;padding:24px}
+    .initials-circle{width:clamp(150px,24vw,260px);height:clamp(150px,24vw,260px);background:#ffe0bd;color:var(--brown);border:8px solid #fffaf5;box-shadow:0 0 0 2px #edb985,0 18px 50px #65433215;font-family:Georgia,serif;font-weight:400;font-size:4rem}
+    .hero-photo:after{content:'';position:absolute;bottom:5px;right:4px;width:42px;height:82px;background:var(--green);border-radius:100% 0 100% 0;transform:rotate(18deg);pointer-events:none}
+    section{padding:clamp(2.5rem,6vw,5rem) 0}
+    h2{font-family:Georgia,serif;font-weight:500;color:var(--brown);font-size:clamp(1.8rem,3.5vw,2.6rem);line-height:1.25}
+    h2:after{content:'';display:block;width:48px;height:4px;background:var(--orange);border-radius:4px;margin:16px 0 24px}
+    .about p{max-width:75ch}
+    .skills{background:#edf3e9}
+    .skill{background:#fffdf8;color:#395538;border:1px solid #b9cdb0;font-weight:600}
+    .portfolio-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,260px),1fr));gap:1.25rem}
+    .card{border:1px solid #eadbcd;border-top:4px solid var(--orange);box-shadow:0 8px 24px #6543320a;padding:1.75rem;display:flex;flex-direction:column;gap:.65rem}
+    .card:nth-child(3n){border-top-color:var(--green)}
+    .card h3{color:var(--brown);line-height:1.35;margin:0}
+    .card a{margin-top:auto;padding-top:.5rem;color:#a3460e}
+    .contact{background:var(--cream)}
+    .contact-box{border:1px solid #eadbcd;box-shadow:none;overflow-wrap:anywhere}
+    a{color:#a3460e}
+    footer{background:var(--brown);color:#fff4e8;padding:2rem}
+    :focus-visible{outline:3px solid #486440;outline-offset:4px}
+    @media(max-width:768px){.hero{flex-direction:column-reverse;text-align:center;gap:1rem}.hero-actions{justify-content:center}.hero-text p{margin-inline:auto}.nav-menu{top:calc(100% + 12px)}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
+
   </style>
 </head>
 <body>
   <nav>
     <div class="nav-container">
-      <a href="index.html" class="nav-brand">VR</a>
+      <a href="index.html" class="nav-brand"><span class="brand-mark">VR</span> Verna Roberts</a>
       <ul class="nav-menu" id="navMenu">
         <li><a href="index.html">Home</a></li>
         <li><a href="#about">About Me</a></li>
@@ -255,19 +303,21 @@
         </li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-      <div class="hamburger" id="hamburger">
+      <button type="button" class="hamburger" id="hamburger" aria-label="Toggle navigation" aria-controls="navMenu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
-      </div>
+      </button>
     </div>
   </nav>
 
   <header>
     <div class="container hero">
       <div class="hero-text">
-        <h1>Verna Roberts</h1>
+        <p class="eyebrow">Welcome to my portfolio</p>
+        <h1>Hello, I’m <span>Verna Roberts.</span></h1>
         <p>Public Health student inspired and dedicated to improving community health</p>
+        <div class="hero-actions"><a class="cta" href="#portfolio">Explore My Work</a><a class="cta secondary" href="#contact">Contact Me</a></div>
       </div>
       <div class="hero-photo">
         <div class="initials-circle">VR</div>
@@ -340,14 +390,17 @@
     hamburger.addEventListener('click', () => {
       hamburger.classList.toggle('active');
       navMenu.classList.toggle('active');
+      hamburger.setAttribute('aria-expanded', String(navMenu.classList.contains('active')));
     });
     const navLinks = navMenu.querySelectorAll('a');
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         hamburger.classList.remove('active');
         navMenu.classList.remove('active');
+        hamburger.setAttribute('aria-expanded','false');
       });
     });
+  document.addEventListener('keydown', e => { if(e.key === 'Escape' && navMenu.classList.contains('active')) { navMenu.classList.remove('active'); hamburger.classList.remove('active'); hamburger.setAttribute('aria-expanded','false'); hamburger.focus(); } });
   </script>
 </body>
 </html>
