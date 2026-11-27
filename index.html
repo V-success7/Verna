@@ -276,6 +276,7 @@
     @media(max-width:768px){.hero{flex-direction:column-reverse;text-align:center;gap:1rem}.hero-actions{justify-content:center}.hero-text p{margin-inline:auto}.nav-menu{top:calc(100% + 12px)}}
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 
+  .hero-photo .profile-photo{display:block;width:clamp(180px,28vw,300px);height:clamp(180px,28vw,300px);object-fit:cover;object-position:50% 30%;border:8px solid #fffaf5;border-radius:50%;box-shadow:0 0 0 3px #ffb66e,0 18px 50px #65433220}
   </style>
 </head>
 <body>
@@ -320,7 +321,7 @@
         <div class="hero-actions"><a class="cta" href="#portfolio">Explore My Work</a><a class="cta secondary" href="#contact">Contact Me</a></div>
       </div>
       <div class="hero-photo">
-        <div class="initials-circle">VR</div>
+        <img class="profile-photo" src="20211215_093007.jpg" alt="Portrait of Verna Roberts" width="260" height="260" decoding="async">
       </div>
     </div>
   </header>
