@@ -277,7 +277,9 @@
     @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition:none!important}}
 
   .hero-photo .profile-photo{display:block;width:clamp(180px,28vw,300px);height:clamp(180px,28vw,300px);object-fit:cover;object-position:50% 30%;border:8px solid #fffaf5;border-radius:50%;box-shadow:0 0 0 3px #ffb66e,0 18px 50px #65433220}
-  </style>
+  .hero-text .hero-tagline { font-size: clamp(1.2rem, 2.5vw, 1.55rem); font-weight: 750; line-height: 1.5; color: #654332; border-left: 4px solid #87a878; padding-left: 16px; margin-top: 1rem; }
+@media(max-width:768px){.hero-text .hero-tagline{border-left:0;padding-left:0;}}
+</style>
 </head>
 <body>
   <nav>
@@ -317,7 +319,7 @@
       <div class="hero-text">
         <p class="eyebrow">Welcome to my portfolio</p>
         <h1>Hello, I’m <span>Verna Roberts.</span></h1>
-        <p>Public Health student inspired and dedicated to improving community health</p>
+        <p class="hero-tagline">Public Health student inspired and dedicated to improving community health</p>
         <div class="hero-actions"><a class="cta" href="#portfolio">Explore My Work</a><a class="cta secondary" href="#contact">Contact Me</a></div>
       </div>
       <div class="hero-photo">
